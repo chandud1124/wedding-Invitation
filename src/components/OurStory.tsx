@@ -181,7 +181,7 @@ const OurStory = () => {
               className="image-container"
               style={{
                 width: '100%',
-                maxWidth: '750px', // Increased from 600px
+                maxWidth: '750px',
                 aspectRatio: '3/2',
                 background: 'transparent',
                 borderRadius: '16px',
@@ -191,26 +191,28 @@ const OurStory = () => {
                 boxSizing: 'border-box',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
+                justifyContent: 'flex-start', // Always align left
               }}
             >
               <img
                 ref={heroImgRef}
                 src="/gallery/s11.JPG"
                 alt="From Strangers to Soulmates"
-                className="rounded-image w-full h-full object-cover"
-                style={{
-                  borderRadius: '16px',
-                  width: '100%',
-                  height: '100%',
-                  maxWidth: '100%',
-                  maxHeight: '100%',
-                  aspectRatio: '3/2',
-                  transition: 'transform 0.4s ease-out',
-                  willChange: 'transform',
-                  objectPosition: 'center',
-                  display: 'block',
-                }}
+              className="rounded-image w-full h-full object-cover"
+              style={{
+                borderRadius: '16px',
+                width: '100%',
+                height: '100%',
+                maxWidth: '100%',
+                maxHeight: '100%',
+                aspectRatio: '3/2',
+                transition: 'transform 0.4s ease-out',
+                willChange: 'transform',
+                objectPosition: 'left',
+                objectFit: 'cover',
+                display: 'block',
+                minWidth: '200px', // Prevent image from shrinking too much
+              }}
               />
             </div>
           </div>
@@ -243,7 +245,7 @@ const OurStory = () => {
             box-sizing: border-box;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start !important;
           }
           .rounded-image {
             border-radius: 16px;
@@ -255,24 +257,37 @@ const OurStory = () => {
             transition: transform 0.4s ease-out;
             will-change: transform;
             object-fit: cover;
-            object-position: center;
+            object-position: left !important;
             display: block;
             transform: scale(0.95);
+            min-width: 200px;
+          }
+          @media (max-width: 1024px) {
+            .image-container {
+              justify-content: flex-start !important;
+            }
+            .rounded-image {
+              object-position: left !important;
+              min-width: 200px !important;
+            }
           }
           .rounded-image.in-view {
             transform: scale(1.05);
           }
           @media (max-width: 768px) {
             .image-container {
-              max-width: 350px; /* Increased from 300px */
+              max-width: 350px;
               min-width: 200px;
               aspect-ratio: 3/2;
-              margin: 8px auto;
+              margin: 8px auto 8px 0 !important;
+              justify-content: flex-start !important;
             }
             .rounded-image {
               aspect-ratio: 3/2;
               max-width: 100%;
               max-height: 100%;
+              object-position: left !important;
+              min-width: 200px !important;
             }
           }
         `}</style>
@@ -280,20 +295,20 @@ const OurStory = () => {
       {/* The Arrangement section with parallax/fixed background and animated text */}
       <section
         className="w-full min-h-screen flex items-center justify-end bg-gradient-to-br from-pink-100 via-blue-100 to-purple-100 relative px-2 md:px-0 p-0 m-0"
-        style={{ height: '100vh', overflowX: 'hidden' }}
+        style={{ 
+          height: '100vh', 
+          overflowX: 'hidden',
+          position: 'relative',
+          backgroundImage: 'url(/gallery/01.jpeg)',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'left center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}
       >
-        <div
-          className="absolute inset-0 w-full h-full z-0"
-          style={{
-            backgroundImage: 'url(/gallery/01.jpeg)',
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover'
-          }}
-        >
-          <div style={{width: '100%', height: '100%', background: 'rgba(0,0,0,0.15)'}} />
-        </div>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-20" />
+        
         <div className="relative z-10 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
           <div
             className="glass rounded-3xl shadow-2xl sm:max-w-xs md:max-w-sm lg:max-w-md w-full mr-0 md:mr-20 p-4 sm:p-6 md:p-16 flex flex-col justify-center items-center text-center mx-auto md:mx-0 arrangement-content-box"
@@ -336,6 +351,21 @@ const OurStory = () => {
           }
           .animate-fade-slide {
             animation: fade-slide 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+          }
+          /* Arrangement section background positioning */
+          @media (max-width: 768px) {
+            .arrangement-content-box {
+              min-height: 0 !important;
+              max-height: 80vh !important;
+              overflow-y: auto !important;
+            }
+          }
+          /* Fix for Safari and iOS */
+          @supports (-webkit-touch-callout: none) {
+            section {
+              background-attachment: scroll;
+              background-position: left center;
+            }
           }
         `}</style>
       </section>
@@ -448,20 +478,19 @@ const OurStory = () => {
       {/* Growing Together section, styled like The Arrangement */}
       <section
         className="w-full min-h-screen flex items-center justify-end bg-gradient-to-br from-pink-100 via-blue-100 to-purple-100 relative px-2 md:px-0 p-0 m-0"
-        style={{ height: '100vh', overflowX: 'hidden' }}
+        style={{ 
+          height: '100vh', 
+          overflowX: 'hidden',
+          position: 'relative',
+          backgroundImage: 'url(/gallery/03.jpeg)',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'left center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}
       >
-        <div
-          className="absolute inset-0 w-full h-full z-0"
-          style={{
-            backgroundImage: 'url(/gallery/03.jpeg)',
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover'
-          }}
-        >
-          <div style={{width: '100%', height: '100%', background: 'rgba(0,0,0,0.15)'}} />
-        </div>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-20" />
         <div className="relative z-10 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
           <div
             className="glass rounded-3xl shadow-2xl sm:max-w-xs md:max-w-sm lg:max-w-md w-full mr-0 md:mr-20 p-4 sm:p-6 md:p-16 flex flex-col justify-center items-center text-center mx-auto md:mx-0 arrangement-content-box"
