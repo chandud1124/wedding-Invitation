@@ -181,7 +181,7 @@ const OurStory = () => {
               className="image-container"
               style={{
                 width: '100%',
-                maxWidth: '750px',
+                maxWidth: '1000px', // Increased from 750px
                 aspectRatio: '3/2',
                 background: 'transparent',
                 borderRadius: '16px',
@@ -196,7 +196,7 @@ const OurStory = () => {
             >
               <img
                 ref={heroImgRef}
-                src="/gallery/s11.JPG"
+                src="/gallery/DSC09421.jpg"
                 alt="From Strangers to Soulmates"
               className="rounded-image w-full h-full object-cover"
               style={{
@@ -211,7 +211,8 @@ const OurStory = () => {
                 objectPosition: 'left',
                 objectFit: 'cover',
                 display: 'block',
-                minWidth: '200px', // Prevent image from shrinking too much
+                minWidth: '300px', // Increased from 200px
+                minHeight: '300px', // Ensure larger minimum height
               }}
               />
             </div>
@@ -299,7 +300,7 @@ const OurStory = () => {
           height: '100vh', 
           overflowX: 'hidden',
           position: 'relative',
-          backgroundImage: 'url(/gallery/01.jpeg)',
+          backgroundImage: 'url(/gallery/DSC08941.jpg)',
           backgroundAttachment: 'fixed',
           backgroundPosition: 'left center',
           backgroundRepeat: 'no-repeat',
@@ -393,7 +394,7 @@ const OurStory = () => {
             >
               <img
                 ref={firstMeetingImgRef}
-                src="/gallery/02.jpeg"
+                src="/gallery/DSC09112.jpg"
                 alt="First Meeting"
                 className="rounded-image w-full h-full object-cover"
                 style={{
@@ -482,7 +483,7 @@ const OurStory = () => {
           height: '100vh', 
           overflowX: 'hidden',
           position: 'relative',
-          backgroundImage: 'url(/gallery/03.jpeg)',
+          backgroundImage: 'url(/gallery/DSC09437.jpg)',
           backgroundAttachment: 'fixed',
           backgroundPosition: 'left center',
           backgroundRepeat: 'no-repeat',
@@ -567,7 +568,7 @@ const OurStory = () => {
             >
               <img
                 ref={finallyImgRef}
-                src="/gallery/04.jpg"
+                src="/gallery/DSC08948.jpg"
                 alt="Finally, Here We Are"
                 className="rounded-image w-full h-full object-cover"
                 style={{

@@ -44,7 +44,7 @@ const EventDetails = () => {
       id="details" 
       className="py-20 px-4 min-h-screen relative overflow-hidden"
       style={{
-        backgroundImage: `url('/gallery/Forever bg.jpg')`,
+        backgroundImage: `url('/gallery/DSC09400 .jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -57,14 +57,17 @@ const EventDetails = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative z-20">
-        <div className="text-center mb-16 transition-all duration-1000 opacity-100 transform translate-y-0 animate-fade-in-up">
-          <h2 className="font-serif text-6xl md:text-7xl font-bold text-white drop-shadow-lg mb-8 hover:scale-105 transition-transform duration-300 whitespace-pre-line break-words leading-tight md:leading-tight">
-            Journey to Forever
-          </h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-rose-500 via-pink-500 to-red-500 mx-auto mb-8"></div>
-          <p className="text-2xl md:text-3xl font-semibold text-white drop-shadow-md">
-            Join us for a day filled with love, laughter, and lifelong memories
-          </p>
+        {/* Glassy background for main text */}
+        <div className="backdrop-blur-lg bg-white/40 rounded-3xl shadow-2xl px-6 py-10 md:px-16 md:py-14 mb-16 border border-white/30" style={{boxShadow: '0 8px 32px 0 rgba(31,38,135,0.18)', WebkitBackdropFilter: 'blur(18px) saturate(120%)', backdropFilter: 'blur(18px) saturate(120%)'}}>
+          <div className="text-center transition-all duration-1000 opacity-100 transform translate-y-0 animate-fade-in-up">
+            <h2 className="font-serif text-6xl md:text-7xl font-bold text-rose-900 drop-shadow-lg mb-8 hover:scale-105 transition-transform duration-300 whitespace-pre-line break-words leading-tight md:leading-tight">
+              Journey to Forever
+            </h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-rose-500 via-pink-500 to-red-500 mx-auto mb-8"></div>
+            <p className="text-2xl md:text-3xl font-semibold text-rose-800 drop-shadow-md">
+              Join us for a day filled with love, laughter, and lifelong memories
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">

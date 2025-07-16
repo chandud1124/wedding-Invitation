@@ -22,10 +22,10 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-700 ${
-      scrolled 
-        ? 'bg-gradient-to-r from-orange-50/60 via-amber-50/60 to-red-50/60 backdrop-blur-sm shadow-lg border-b border-orange-200/30 h-14' 
-        : 'bg-transparent h-14'
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-700 rounded-b-2xl md:rounded-b-3xl ${
+      scrolled
+        ? 'bg-white/30 backdrop-blur-2xl shadow-lg border-b border-rose-200/30 h-14 opacity-100 pointer-events-auto'
+        : 'opacity-0 pointer-events-none h-14'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center">
         <div className="flex justify-between items-center w-full">
