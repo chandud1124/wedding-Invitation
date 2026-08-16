@@ -83,7 +83,7 @@ const Hero = () => {
           
           {/* Names with Elegant Typography on One Line */}
           <div className="mb-6 animate-fade-in-up">
-            <h1 className="font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-foreground tracking-wide text-center">
+            <h1 className="font-serif text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-foreground tracking-wide text-center whitespace-nowrap">
               M. V. Chiranjith <span className="text-primary italic font-light">&</span> K. Thriveni
             </h1>
           </div>
