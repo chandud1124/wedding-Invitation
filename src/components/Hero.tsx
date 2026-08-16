@@ -81,10 +81,10 @@ const Hero = () => {
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-20">
         <div className="text-center max-w-4xl mx-auto">
           
-          {/* Names with Elegant Typography on One Line */}
+          {/* Names with Elegant Calligraphy Typography on One Line */}
           <div className="mb-6 animate-fade-in-up">
-            <h1 className="font-serif text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-foreground tracking-wide text-center whitespace-nowrap">
-              M. V. Chiranjith <span className="text-primary italic font-light">&</span> K. Thriveni
+            <h1 className="font-script text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#800020] text-center whitespace-nowrap py-2">
+              M. V. Chiranjith & K. Thriveni
             </h1>
           </div>
 

@@ -26,6 +26,7 @@ module.exports = {
       fontFamily: {
         'serif': ['Cormorant Garamond', 'Georgia', 'serif'],
         'sans': ['Manrope', 'system-ui', 'sans-serif'],
+        'script': ['Great Vibes', 'cursive'],
       },
       colors: {
         border: 'hsl(var(--border))',

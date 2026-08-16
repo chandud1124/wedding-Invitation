@@ -6,8 +6,8 @@ const Footer = () => {
     <footer className="bg-background py-24 border-t border-primary/20 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
         <div className="mb-10">
-          <h3 className="font-serif text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-wide whitespace-nowrap">
-            M. V. Chiranjith <span className="text-primary italic font-light">&</span> K. Thriveni
+          <h3 className="font-script text-4xl sm:text-5xl md:text-6xl text-[#800020] mb-4 whitespace-nowrap py-1">
+            M. V. Chiranjith & K. Thriveni
           </h3>
           <div className="text-lg font-serif italic text-primary">
             Together, Always
