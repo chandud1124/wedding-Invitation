@@ -31,7 +31,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center w-full">
           <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => scrollToSection('home')}>
             <img src="/image-2.svg" alt="Logo" className={`w-10 h-10 rounded-full transition-all duration-300 ${isOpen ? 'w-8 h-8' : ''}`} style={{ display: 'block' }} />
-            <div className="font-serif font-bold text-foreground hover:text-primary transition-colors duration-300 text-2xl tracking-wide">
+            <div className="font-serif font-medium text-foreground hover:text-primary transition-colors duration-300 text-2xl tracking-wide">
               C & T
             </div>
           </div>
