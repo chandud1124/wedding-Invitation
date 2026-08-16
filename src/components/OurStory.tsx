@@ -225,8 +225,8 @@ const OurStory = () => {
             className="w-full lg:w-1/2 flex flex-col justify-center p-8 md:p-12 text-center md:text-left opacity-0 translate-y-8 transition-all duration-700"
           >
             <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground mb-4">From Strangers to Soulmates</h2>
-            <p className="text-lg md:text-xl text-foreground/80 mb-6 font-light">Guided by family, nurtured by tradition, and sealed with eternal love</p>
-            <p className="text-base md:text-lg text-primary font-medium italic mt-2">" A match made by PARENTS, a love made by US "</p>
+            <p className="text-lg md:text-xl text-foreground/80 mb-6 font-light">Guided by family, nurtured by tradition, and sealed with eternal love.</p>
+            <p className="text-base md:text-lg text-primary font-medium italic mt-2">"A match made by family, a love made by us."</p>
           </div>
         </div>
         <style>{`
@@ -346,10 +346,7 @@ const OurStory = () => {
             <div ref={arrangementTextRef} className="opacity-0 translate-y-8 transition-all duration-700">
               <h2 className="text-4xl md:text-5xl font-serif font-medium mb-6 text-foreground">The Arrangement</h2>
               <p className="text-lg md:text-xl mb-4 font-light text-foreground/85 leading-relaxed">
-                In the presence of tradition and the wisdom of our families, a match was made thoughtfully, respectfully, and with love from those who know us best.
-              </p>
-              <p className="text-base md:text-lg font-light text-foreground/80 leading-relaxed">
-                What began as an arrangement between two families became the beginning of a meaningful journey of mutual understanding, shared values, and a bond that continues to grow each day.
+                What began as a thoughtful union of two families quickly blossomed into a beautiful promise of mutual understanding and shared values.
               </p>
             </div>
           </div>
@@ -419,9 +416,7 @@ const OurStory = () => {
             className="w-full lg:w-1/2 flex flex-col justify-center p-8 md:p-12 text-center md:text-left opacity-0 translate-y-8 transition-all duration-700"
           >
             <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground mb-4">First Meeting</h2>
-            <p className="text-lg md:text-xl text-foreground/80 mb-6 font-light">There were butterflies, shy smiles, and a little nervousness in the air.</p>
-            <p className="text-base md:text-lg text-foreground/80 font-light leading-relaxed">But as we talked gently, naturally time seemed to pause. That first meeting, arranged lovingly by our families, held a quiet spark.</p>
-            <p className="text-base md:text-lg text-foreground/80 font-light mt-2 leading-relaxed">It wasn’t love at first sight, but it was a beginning filled with warmth and hope.</p>
+            <p className="text-lg md:text-xl text-foreground/80 mb-6 font-light leading-relaxed">A gentle conversation, shy smiles, and a quiet spark. It was the beginning of a journey filled with warmth and hope.</p>
           </div>
         </div>
       </section>
@@ -460,10 +455,7 @@ const OurStory = () => {
             <div ref={growingTextRef} className="opacity-0 translate-y-8 transition-all duration-700">
               <h2 className="text-4xl md:text-5xl font-serif font-medium mb-6 text-foreground">Growing Together</h2>
               <p className="text-lg md:text-xl mb-4 font-light text-foreground/85 leading-relaxed">
-                With every conversation, every shared smile, and every new experience, our bond deepened. We learned, adapted, and supported each other through joys and challenges alike.
-              </p>
-              <p className="text-base md:text-lg font-light text-foreground/80 leading-relaxed">
-                Our journey is a beautiful mosaic of laughter, understanding, and growth—two souls, hand in hand, growing stronger together every day.
+                With every shared smile and conversation, our bond deepened into a beautiful mosaic of understanding, adaptation, and growth.
               </p>
             </div>
           </div>
@@ -518,8 +510,7 @@ const OurStory = () => {
             className="w-full lg:w-1/2 flex flex-col justify-center p-8 md:p-12 text-center md:text-left opacity-0 translate-y-8 transition-all duration-700"
           >
             <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground mb-4">Finally, Here We Are</h2>
-            <p className="text-lg md:text-xl text-foreground/80 mb-6 font-light leading-relaxed">Through every twist and turn, every moment of laughter and learning, we have arrived at this beautiful chapter—together.</p>
-            <p className="text-base md:text-lg text-primary font-semibold italic mt-2">Our story is just beginning, and we can't wait to write the next pages hand in hand.</p>
+            <p className="text-lg md:text-xl text-foreground/80 mb-6 font-light leading-relaxed">Arriving at this beautiful chapter together, our story is just beginning as we write the next pages hand in hand.</p>
           </div>
         </div>
         <style>{`
