@@ -300,7 +300,7 @@ const OurStory = () => {
       >
         {/* Background image container */}
         <div 
-          className="absolute inset-0 bg-cover bg-no-repeat bg-scroll md:bg-fixed bg-left md:bg-center"
+          className="absolute inset-0 bg-cover bg-no-repeat bg-scroll md:bg-fixed bg-[position:30%_center] md:bg-center"
           style={{
             backgroundImage: 'url(/gallery/image-5.jpeg)',
             backgroundSize: 'cover',
@@ -309,7 +309,7 @@ const OurStory = () => {
         {/* Subtle Transparent Ivory Overlay */}
         <div className="absolute inset-0 bg-background/15 z-10"></div>
         
-        <div className="relative z-20 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
+        <div className="relative z-20 flex items-end md:items-center min-h-screen w-full justify-center md:justify-end px-4 md:px-0 pb-10 md:pb-0">
           <div
             className="glass rounded-3xl shadow-sm sm:max-w-xs md:max-w-sm lg:max-w-md w-full mr-0 md:mr-20 p-4 sm:p-6 md:p-16 flex flex-col justify-center items-center text-center mx-auto md:mx-0 arrangement-content-box"
             style={{
@@ -411,7 +411,7 @@ const OurStory = () => {
       >
         {/* Background image container */}
         <div 
-          className="absolute inset-0 bg-cover bg-no-repeat bg-scroll md:bg-fixed bg-left md:bg-center"
+          className="absolute inset-0 bg-cover bg-no-repeat bg-scroll md:bg-fixed bg-center"
           style={{
             backgroundImage: 'url(/gallery/image-8.jpeg)',
             backgroundSize: 'cover',
@@ -420,7 +420,7 @@ const OurStory = () => {
         {/* Subtle Transparent Ivory Overlay */}
         <div className="absolute inset-0 bg-background/15 z-10"></div>
 
-        <div className="relative z-20 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
+        <div className="relative z-20 flex items-end md:items-center min-h-screen w-full justify-center md:justify-end px-4 md:px-0 pb-10 md:pb-0">
           <div
             className="glass rounded-3xl shadow-sm sm:max-w-xs md:max-w-sm lg:max-w-md w-full mr-0 md:mr-20 p-4 sm:p-6 md:p-16 flex flex-col justify-center items-center text-center mx-auto md:mx-0 arrangement-content-box"
             style={{
