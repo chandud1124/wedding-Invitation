@@ -224,7 +224,7 @@ const OurStory = () => {
             ref={heroTextRef}
             className="w-full lg:w-1/2 flex flex-col justify-center p-8 md:p-12 text-center md:text-left opacity-0 translate-y-8 transition-all duration-700"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">From Strangers to Soulmates</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground mb-4">From Strangers to Soulmates</h2>
             <p className="text-lg md:text-xl text-foreground/80 mb-6 font-light">Guided by family, nurtured by tradition, and sealed with eternal love</p>
             <p className="text-base md:text-lg text-primary font-medium italic mt-2">" A match made by PARENTS, a love made by US "</p>
           </div>
@@ -324,7 +324,7 @@ const OurStory = () => {
             }}
           >
             <div ref={arrangementTextRef} className="opacity-0 translate-y-8 transition-all duration-700">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-foreground">The Arrangement</h2>
+              <h2 className="text-4xl md:text-5xl font-serif font-medium mb-6 text-foreground">The Arrangement</h2>
               <p className="text-lg md:text-xl mb-4 font-light text-foreground/85 leading-relaxed">
                 In the presence of tradition and the wisdom of our families, a match was made thoughtfully, respectfully, and with love from those who know us best.
               </p>
@@ -398,7 +398,7 @@ const OurStory = () => {
             ref={firstMeetingTextRef}
             className="w-full lg:w-1/2 flex flex-col justify-center p-8 md:p-12 text-center md:text-left opacity-0 translate-y-8 transition-all duration-700"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">First Meeting</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground mb-4">First Meeting</h2>
             <p className="text-lg md:text-xl text-foreground/80 mb-6 font-light">There were butterflies, shy smiles, and a little nervousness in the air.</p>
             <p className="text-base md:text-lg text-foreground/80 font-light leading-relaxed">But as we talked gently, naturally time seemed to pause. That first meeting, arranged lovingly by our families, held a quiet spark.</p>
             <p className="text-base md:text-lg text-foreground/80 font-light mt-2 leading-relaxed">It wasn’t love at first sight, but it was a beginning filled with warmth and hope.</p>
@@ -437,7 +437,7 @@ const OurStory = () => {
             }}
           >
             <div ref={growingTextRef} className="opacity-0 translate-y-8 transition-all duration-700">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-foreground">Growing Together</h2>
+              <h2 className="text-4xl md:text-5xl font-serif font-medium mb-6 text-foreground">Growing Together</h2>
               <p className="text-lg md:text-xl mb-4 font-light text-foreground/85 leading-relaxed">
                 With every conversation, every shared smile, and every new experience, our bond deepened. We learned, adapted, and supported each other through joys and challenges alike.
               </p>
@@ -496,7 +496,7 @@ const OurStory = () => {
             ref={finallyTextRef}
             className="w-full lg:w-1/2 flex flex-col justify-center p-8 md:p-12 text-center md:text-left opacity-0 translate-y-8 transition-all duration-700"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Finally, Here We Are</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground mb-4">Finally, Here We Are</h2>
             <p className="text-lg md:text-xl text-foreground/80 mb-6 font-light leading-relaxed">Through every twist and turn, every moment of laughter and learning, we have arrived at this beautiful chapter—together.</p>
             <p className="text-base md:text-lg text-primary font-semibold italic mt-2">Our story is just beginning, and we can't wait to write the next pages hand in hand.</p>
           </div>

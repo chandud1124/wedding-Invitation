@@ -55,11 +55,11 @@ const EventDetails = () => {
 
       <div className="max-w-6xl mx-auto relative z-20">
         {/* Main Text Panel */}
-        <div className="bg-background/90 border border-primary/20 rounded-3xl shadow-sm px-6 py-12 md:px-16 md:py-16 mb-16 text-center animate-fade-in-up">
-          <h2 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-6 tracking-wide">
+        <div className="bg-background/90 border border-accent/20 rounded-3xl shadow-sm px-6 py-12 md:px-16 md:py-16 mb-16 text-center animate-fade-in-up">
+          <h2 className="font-serif text-5xl md:text-6xl font-medium text-[#7A102B] mb-6 tracking-wide">
             Journey to Forever
           </h2>
-          <div className="w-20 h-[1.5px] bg-primary mx-auto mb-6"></div>
+          <div className="w-20 h-[1.5px] bg-accent/40 mx-auto mb-6"></div>
           <p className="text-xl md:text-2xl font-light text-foreground/80 max-w-2xl mx-auto leading-relaxed">
             Join us as we celebrate our wedding and begin our journey together.
           </p>
@@ -72,28 +72,28 @@ const EventDetails = () => {
             style={{
               background: 'rgba(250, 249, 246, 0.95)',
               color: '#262626',
-              border: '1px solid rgba(197, 160, 89, 0.3)',
+              border: '1px solid rgba(197, 160, 89, 0.25)',
               boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.04)',
               borderRadius: '1.5rem',
             }}
           >
             <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Calendar className="text-primary" size={28} />
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Calendar className="text-accent" size={28} />
               </div>
-              <h3 className="font-serif text-3xl font-bold text-foreground mb-4">
+              <h3 className="font-serif text-3xl font-medium text-foreground mb-4">
                 Tying the Knot
               </h3>
-              <div className="w-12 h-[1.5px] bg-primary/30 mx-auto"></div>
+              <div className="w-12 h-[1.5px] bg-accent/30 mx-auto"></div>
             </div>
 
             <div className="space-y-4 text-center">
               <div className="flex items-center justify-center">
-                <Calendar className="text-primary mr-2" size={20} />
+                <Calendar className="text-accent mr-2" size={20} />
                 <span className="text-foreground/80 font-medium text-base">Sunday, 23 August 2026</span>
               </div>
               <div className="flex items-center justify-center">
-                <Clock className="text-primary mr-2" size={20} />
+                <Clock className="text-accent mr-2" size={20} />
                 <span className="text-foreground/80 font-medium text-base">10:09 AM – 11:00 AM</span>
               </div>
             </div>
@@ -105,28 +105,28 @@ const EventDetails = () => {
             style={{
               background: 'rgba(250, 249, 246, 0.95)',
               color: '#262626',
-              border: '1px solid rgba(197, 160, 89, 0.3)',
+              border: '1px solid rgba(197, 160, 89, 0.25)',
               boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.04)',
               borderRadius: '1.5rem',
             }}
           >
             <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="text-primary" size={28} />
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="text-accent" size={28} />
               </div>
-              <h3 className="font-serif text-3xl font-bold text-foreground mb-4">
+              <h3 className="font-serif text-3xl font-medium text-foreground mb-4">
                 Evening of Elegance
               </h3>
-              <div className="w-12 h-[1.5px] bg-primary/30 mx-auto"></div>
+              <div className="w-12 h-[1.5px] bg-accent/30 mx-auto"></div>
             </div>
 
             <div className="space-y-4 text-center">
               <div className="flex items-center justify-center">
-                <Calendar className="text-primary mr-2" size={20} />
+                <Calendar className="text-accent mr-2" size={20} />
                 <span className="text-foreground/80 font-medium text-base">Saturday, 22 August 2026</span>
               </div>
               <div className="flex items-center justify-center">
-                <Clock className="text-primary mr-2" size={20} />
+                <Clock className="text-accent mr-2" size={20} />
                 <span className="text-foreground/80 font-medium text-base">6:30 PM onwards</span>
               </div>
             </div>
@@ -139,7 +139,7 @@ const EventDetails = () => {
           style={{
             background: 'rgba(250, 249, 246, 0.95)',
             color: '#262626',
-            border: '1px solid rgba(197, 160, 89, 0.3)',
+            border: '1px solid rgba(197, 160, 89, 0.25)',
             boxShadow: '0 4px 25px 0 rgba(0, 0, 0, 0.05)',
             borderRadius: '1.5rem',
           }}
@@ -154,12 +154,12 @@ const EventDetails = () => {
           <div className="absolute inset-0 bg-background/60 z-0"></div>
           
           <div className="relative z-10 text-center flex flex-col items-center justify-center w-full">
-            <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h3 className="font-serif text-4xl md:text-5xl font-medium text-foreground mb-6">
               The Setting of Our Story
             </h3>
-            <div className="w-16 h-[1.5px] bg-primary mx-auto mb-6"></div>
+            <div className="w-16 h-[1.5px] bg-accent/30 mx-auto mb-6"></div>
             <div className="max-w-2xl mx-auto space-y-4 text-foreground/80 leading-relaxed mb-8">
-              <p className="text-lg font-medium italic text-primary">
+              <p className="text-lg font-medium italic text-[#7A102B]">
                 "A place where culture and grace come together to write love’s most beautiful chapter"
               </p>
               <p className="text-base sm:text-lg">
@@ -168,10 +168,10 @@ const EventDetails = () => {
             </div>
             <button 
               onClick={handleDirectionsClick}
-              className="group inline-flex items-center px-8 py-3.5 bg-primary text-white font-medium rounded-full shadow-sm hover:shadow-md transform transition-all duration-300 hover:scale-[1.02]"
+              className="group inline-flex items-center justify-center h-[44px] px-6 bg-foreground text-background font-sans font-medium text-[11px] sm:text-xs rounded-full shadow-sm hover:bg-foreground/90 transition-all duration-300 hover:scale-[1.01] tracking-[0.08em] uppercase"
             >
-              <ExternalLink className="mr-3" size={18} />
-              <span className="text-base">Get Directions</span>
+              <ExternalLink className="mr-2 opacity-80" size={12} />
+              <span>Get Directions</span>
             </button>
           </div>
         </div>
