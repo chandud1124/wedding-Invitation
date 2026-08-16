@@ -90,9 +90,9 @@ const Hero = () => {
 
           {/* Wedding Date */}
           <div className="mb-10 animate-fade-in-up flex justify-center w-full">
-            <div className="inline-flex items-center bg-background/50 border border-primary/20 px-6 py-2 rounded-full shadow-sm mx-auto">
+            <div className="inline-flex items-center bg-background border border-primary/30 px-6 py-2.5 rounded-full shadow-sm mx-auto">
               <Calendar size={18} className="text-primary mr-3" />
-              <span className="font-sans font-medium text-xs sm:text-sm text-foreground/80 tracking-widest uppercase">
+              <span className="font-sans font-semibold text-xs sm:text-sm text-foreground tracking-widest uppercase">
                 August 23rd, 2026
               </span>
             </div>
@@ -101,7 +101,7 @@ const Hero = () => {
           {/* Countdown Timer */}
           {!isMarried ? (
             <div className="mb-10 animate-slide-up">
-              <div className="flex items-center justify-center space-x-6 sm:space-x-8 max-w-md mx-auto">
+              <div className="flex items-center justify-center space-x-8 sm:space-x-12 max-w-md mx-auto">
                 {[
                   { label: 'Days', value: timeLeft.days },
                   { label: 'Hours', value: timeLeft.hours },
@@ -109,10 +109,10 @@ const Hero = () => {
                   { label: 'Secs', value: timeLeft.seconds }
                 ].map((item) => (
                   <div key={item.label} className="text-center">
-                    <div className="text-2xl sm:text-3xl font-serif font-bold text-primary">
+                    <div className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
                       {item.value}
                     </div>
-                    <div className="text-[10px] font-sans font-medium text-foreground/60 uppercase tracking-widest mt-1">
+                    <div className="text-xs font-sans font-semibold text-primary uppercase tracking-widest mt-1">
                       {item.label}
                     </div>
                   </div>
@@ -131,24 +131,24 @@ const Hero = () => {
           <div className="mb-10 animate-fade-in-up flex justify-center w-full">
             <button 
               onClick={handleDirectionsClick}
-              className="group inline-flex items-center px-6 py-2.5 bg-primary text-white font-medium text-sm rounded-full shadow-sm hover:shadow-md transform transition-all duration-300 hover:scale-[1.02]"
+              className="group inline-flex items-center px-8 py-3 bg-foreground text-background font-semibold text-sm rounded-full shadow-md hover:bg-foreground/90 transform transition-all duration-300 hover:scale-[1.02] tracking-wider uppercase"
             >
-              <ExternalLink className="mr-2 animate-pulse" size={16} />
-              <span className="font-sans tracking-wide">Get Directions</span>
+              <ExternalLink className="mr-2" size={16} />
+              <span className="font-sans">Get Directions</span>
             </button>
           </div>
 
           {/* Simple Elegant Quote */}
-          <div className="mt-8">
-            <div className="text-lg sm:text-xl text-foreground/80 font-serif font-light max-w-2xl mx-auto leading-relaxed italic">
+          <div className="mt-10">
+            <div className="text-xl sm:text-2xl text-foreground font-serif font-light max-w-2xl mx-auto leading-relaxed italic">
               "Like sacred threads in a mangalsutra, our fates are woven together"
             </div>
             {/* Continuous Mangalsutra Dots */}
-            <div className="flex justify-center items-center mt-6 gap-1.5">
+            <div className="flex justify-center items-center mt-6 gap-2">
               {[...Array(8)].map((_, i) => (
                 <span
                   key={i}
-                  className="inline-block w-1.5 h-1.5 rounded-full bg-primary/40 animate-mangal-dot-continuous"
+                  className="inline-block w-2 h-2 rounded-full bg-primary/60 animate-mangal-dot-continuous"
                   style={{
                     animationDelay: `${i * 0.18}s`,
                     verticalAlign: 'middle'
