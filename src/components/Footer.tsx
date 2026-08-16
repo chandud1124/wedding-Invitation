@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-background py-16 border-t border-primary/20 relative overflow-hidden">
+    <footer className="bg-background py-24 border-t border-primary/20 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
         <div className="mb-10">
           <h3 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-wide">
