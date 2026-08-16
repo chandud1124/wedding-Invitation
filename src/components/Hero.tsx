@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Heart } from 'lucide-react';
+import { Calendar, ExternalLink } from 'lucide-react';
+import { gtagEvent, getDeviceInfo } from '../lib/gtag';
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -41,6 +42,24 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleDirectionsClick = () => {
+    const device = getDeviceInfo();
+    gtagEvent({
+      action: 'click',
+      category: 'Button',
+      label: 'Get Directions (Hero)',
+      value: device.deviceLabel,
+      device_type: device.deviceType,
+      device_vendor: device.deviceVendor,
+      device_model: device.deviceModel,
+      os: device.os,
+      browser: device.browser,
+      page_path: window.location.pathname,
+      timestamp: Date.now(),
+    });
+    window.open('https://www.google.com/maps/search/Sri+Girijashankara+Kalyana+Mantapa', '_blank');
+  };
+
   return (
     <section 
       id="home" 
@@ -62,12 +81,10 @@ const Hero = () => {
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-20">
         <div className="text-center max-w-4xl mx-auto">
           
-          {/* Names with Elegant Typography */}
+          {/* Names with Elegant Typography on One Line */}
           <div className="mb-6 animate-fade-in-up">
-            <h1 className="font-serif text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-bold mb-4 text-foreground tracking-wide flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-              <span>Chiranjith</span>
-              <span className="text-primary italic font-light font-serif">&</span>
-              <span>K. Thriveni</span>
+            <h1 className="font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-foreground tracking-wide text-center">
+              M. V. Chiranjith <span className="text-primary italic font-light">&</span> K. Thriveni
             </h1>
           </div>
 
@@ -109,6 +126,17 @@ const Hero = () => {
               </h2>
             </div>
           )}
+
+          {/* Get Directions Button */}
+          <div className="mb-10 animate-fade-in-up flex justify-center w-full">
+            <button 
+              onClick={handleDirectionsClick}
+              className="group inline-flex items-center px-6 py-2.5 bg-primary text-white font-medium text-sm rounded-full shadow-sm hover:shadow-md transform transition-all duration-300 hover:scale-[1.02]"
+            >
+              <ExternalLink className="mr-2 animate-pulse" size={16} />
+              <span className="font-sans tracking-wide">Get Directions</span>
+            </button>
+          </div>
 
           {/* Simple Elegant Quote */}
           <div className="mt-8">
