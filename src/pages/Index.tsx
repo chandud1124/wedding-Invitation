@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import Hero from '../components/Hero';
 import OurStory from '../components/OurStory';
 import EventDetails from '../components/EventDetails';
-import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import Loader from '../components/ui/Loader';
@@ -15,7 +14,6 @@ const Index = () => {
         <Hero />
         <OurStory />
         <EventDetails />
-        <Gallery />
         <Footer />
       </Suspense>
     </div>

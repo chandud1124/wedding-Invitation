@@ -30,7 +30,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center">
         <div className="flex justify-between items-center w-full">
           <div className={`flex items-center space-x-3 group hover-scale transition-all duration-300 ${isOpen ? 'scale-90' : ''}`}>
-            <img src="/logo1.png" alt="Logo" className={`w-14 h-14 rounded-full transition-all duration-300 ${isOpen ? 'w-10 h-10' : ''}`} style={{ display: 'block', lineHeight: 1.2, paddingBottom: '0.25em', cursor: 'pointer' }} onClick={() => scrollToSection('home')} />
+            <img src="/image-2.svg" alt="Logo" className={`w-14 h-14 rounded-full transition-all duration-300 ${isOpen ? 'w-10 h-10' : ''}`} style={{ display: 'block', lineHeight: 1.2, paddingBottom: '0.25em', cursor: 'pointer' }} onClick={() => scrollToSection('home')} />
             <div className="relative">
               <Heart size={isOpen ? 20 : 28} className="text-orange-600 animate-pulse group-hover:animate-bounce transition-all duration-300" />
               <div className="absolute inset-0 animate-ping opacity-20">
@@ -38,7 +38,7 @@ const Navigation = () => {
               </div>
             </div>
             <div className={`font-serif font-bold bg-gradient-to-r from-orange-600 via-amber-600 to-red-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 ${isOpen ? 'text-xl' : 'text-3xl'}`}>
-              M & S
+              C & T
             </div>
           </div>
 
@@ -47,8 +47,7 @@ const Navigation = () => {
             {[
               { name: 'Home', id: 'home' },
               { name: 'Our Story', id: 'story' },
-              { name: 'Sacred Details', id: 'details' },
-              { name: 'Gallery', id: 'gallery' }
+              { name: 'Sacred Details', id: 'details' }
             ].map((item) => (
               <button
                 key={item.name}
@@ -84,8 +83,7 @@ const Navigation = () => {
               {[
                 { name: 'Home', id: 'home' },
                 { name: 'Our Story', id: 'story' },
-                { name: 'Sacred Details', id: 'details' },
-                { name: 'Gallery', id: 'gallery' }
+                { name: 'Sacred Details', id: 'details' }
               ].map((item) => (
                 <button
                   key={item.name}

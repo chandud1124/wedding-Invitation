@@ -12,7 +12,7 @@ const Hero = () => {
   const [isMarried, setIsMarried] = useState(false);
 
   useEffect(() => {
-    const targetDate = new Date('2025-08-04T09:40:00').getTime();
+    const targetDate = new Date('August 23, 2026 10:09:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -90,14 +90,14 @@ const Hero = () => {
           >
             <h1 className="font-serif text-7xl xs:text-8xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4 leading-tight flex flex-col sm:flex-row items-center sm:items-baseline justify-center gap-2 sm:gap-6 relative flex-wrap text-balance" style={{ lineHeight: 1.2, paddingBottom: '0.25em' }}>
               <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-blue-300 bg-clip-text text-transparent hover:scale-105 transition-transform duration-500">
-                Manoj
+                Chiranjith
               </span>
               <span className="relative flex items-center justify-center align-middle my-2 sm:my-0" style={{marginTop: '0.1em'}}>
                 <span className="absolute -inset-4 animate-ping rounded-full bg-pink-300/40 z-0" style={{filter: 'blur(8px)'}}></span>
                 <Heart size={48} className="text-red-400 drop-shadow-lg animate-bounce-slow z-10 align-middle" style={{filter: 'drop-shadow(0 0 8px #f87171)', verticalAlign: 'middle'}} />
               </span>
               <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent hover:scale-105 transition-transform duration-500">
-                Soniya
+                K. Thriveni
               </span>
             </h1>
           </div>
@@ -114,7 +114,7 @@ const Hero = () => {
             <div className="inline-flex items-center bg-white/20 backdrop-blur-md px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full shadow-xl border border-white/30 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto" style={{width: 'auto', minWidth: 220}}>
               <Calendar size={24} className="text-yellow-300 mr-3" />
               <span className="font-bold text-base sm:text-lg md:text-xl text-white truncate">
-                August 4th, 2025
+                August 23rd, 2026
               </span>
             </div>
           </div>

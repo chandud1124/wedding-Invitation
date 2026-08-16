@@ -196,7 +196,7 @@ const OurStory = () => {
             >
               <img
                 ref={heroImgRef}
-                src="/gallery/DSC09421.jpg"
+                src="/gallery/image-5.jpeg"
                 alt="From Strangers to Soulmates"
               className="rounded-image w-full h-full object-cover"
               style={{
@@ -300,7 +300,7 @@ const OurStory = () => {
           height: '100vh', 
           overflowX: 'hidden',
           position: 'relative',
-          backgroundImage: 'url(/gallery/DSC08941.jpg)',
+          backgroundImage: 'url(/gallery/image-7.jpeg)',
           backgroundAttachment: 'fixed',
           backgroundPosition: 'left center',
           backgroundRepeat: 'no-repeat',
@@ -394,7 +394,7 @@ const OurStory = () => {
             >
               <img
                 ref={firstMeetingImgRef}
-                src="/gallery/DSC09112.jpg"
+                src="/gallery/image-6.jpeg"
                 alt="First Meeting"
                 className="rounded-image w-full h-full object-cover"
                 style={{
@@ -483,7 +483,7 @@ const OurStory = () => {
           height: '100vh', 
           overflowX: 'hidden',
           position: 'relative',
-          backgroundImage: 'url(/gallery/DSC09437.jpg)',
+          backgroundImage: 'url(/gallery/image-8.jpeg)',
           backgroundAttachment: 'fixed',
           backgroundPosition: 'left center',
           backgroundRepeat: 'no-repeat',
@@ -568,7 +568,7 @@ const OurStory = () => {
             >
               <img
                 ref={finallyImgRef}
-                src="/gallery/DSC08948.jpg"
+                src="/gallery/image-6.jpeg"
                 alt="Finally, Here We Are"
                 className="rounded-image w-full h-full object-cover"
                 style={{

@@ -4,7 +4,7 @@ const milestones = [
   { year: "2019", event: "First Met 💬" },
   { year: "2020", event: "First Trip ✈️" },
   { year: "2022", event: "Proposal 💍" },
-  { year: "2025", event: "Wedding Day 💒" },
+  { year: "2026", event: "Wedding Day 💒" },
 ];
 
 export default function Timeline() {

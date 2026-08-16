@@ -32,14 +32,14 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
         <div className="mb-12 hover-scale">
           <h3 className="font-serif text-5xl md:text-6xl font-bold mb-8 pb-2 leading-[1.15] hover:scale-105 transition-transform duration-500 text-[#191970]">
-            Manoj & Soniya
+            Chiranjith & K. Thriveni
           </h3>
           <div className="flex items-center justify-center space-x-6 text-2xl md:text-3xl mb-2">
             <Sparkles size={28} className="text-[#d4af37] animate-sparkle-float" />
             <span className="font-bold font-serif text-[#191970]">Together, Always</span>
             <Sparkles size={28} className="text-[#b76e79] animate-sparkle-float delay-500" />
           </div>
-          <div className="text-xl md:text-2xl font-bold text-[#191970] mb-4">4th August 2024</div>
+          <div className="text-xl md:text-2xl font-bold text-[#191970] mb-4">23rd August 2026</div>
         </div>
 
         <div className="border-t-2 border-[#d4af37]/60 pt-12 mb-10">
@@ -63,7 +63,7 @@ const Footer = () => {
             <Heart size={20} className="text-[#d4af37] animate-bounce delay-400" />
           </div>
           <p className="text-lg flex items-center justify-center hover:scale-105 transition-transform duration-500 font-medium text-[#191970]">
-            Crafted with <Heart size={18} className="inline mx-2 text-[#d4af37] animate-heart-beat" /> for Manoj & Soniya's Wedding
+            Crafted with <Heart size={18} className="inline mx-2 text-[#d4af37] animate-heart-beat" /> for Chiranjith & K. Thriveni's Wedding
           </p>
         </div>
       </div>

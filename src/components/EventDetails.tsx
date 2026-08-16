@@ -18,7 +18,7 @@ const EventDetails = () => {
       page_path: window.location.pathname,
       timestamp: Date.now(),
     });
-    window.open('https://www.google.com/maps/search/KMM+Royal+Convention+Center', '_blank');
+    window.open('https://www.google.com/maps/search/Sri+Girijashankara+Kalyana+Mantapa', '_blank');
   };
 
   // Track device info on page load
@@ -44,7 +44,7 @@ const EventDetails = () => {
       id="details" 
       className="py-20 px-4 min-h-screen relative overflow-hidden"
       style={{
-        backgroundImage: `url('/gallery/DSC09400 .jpg')`,
+        backgroundImage: `url('/gallery/image-7.jpeg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
@@ -98,11 +98,11 @@ const EventDetails = () => {
             <div className="space-y-6 text-center">
               <div className="flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
                 <Calendar className="text-rose-200 mr-2" size={24} />
-                <span className="text-white font-semibold text-lg drop-shadow-md">4th Monday, August 2024</span>
+                <span className="text-white font-semibold text-lg drop-shadow-md">Sunday, 23 August 2026</span>
               </div>
               <div className="flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
                 <Clock className="text-rose-200 mr-2" size={24} />
-                <span className="text-white font-semibold text-lg drop-shadow-md">9:40 AM to 10:30 AM</span>
+                <span className="text-white font-semibold text-lg drop-shadow-md">10:09 AM – 11:00 AM</span>
               </div>
             </div>
           </div>
@@ -134,11 +134,11 @@ const EventDetails = () => {
             <div className="space-y-6 text-center">
               <div className="flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
                 <Calendar className="text-red-200 mr-2" size={24} />
-                <span className="text-white font-semibold text-lg drop-shadow-md">3rd Sunday, August 2024</span>
+                <span className="text-white font-semibold text-lg drop-shadow-md">Saturday, 22 August 2026</span>
               </div>
               <div className="flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
                 <Clock className="text-red-200 mr-2" size={24} />
-                <span className="text-white font-semibold text-lg drop-shadow-md">7:00 PM onwards</span>
+                <span className="text-white font-semibold text-lg drop-shadow-md">6:30 PM onwards</span>
               </div>
             </div>
           </div>
@@ -160,8 +160,8 @@ const EventDetails = () => {
         >
           {/* Venue background image */}
           <img 
-            src="/kmm.jpeg" 
-            alt="KMM Royal Convention Center"
+            src="/image-3.png" 
+            alt="Sri Girijashankara Kalyana Mantapa"
             className="absolute inset-0 w-full h-full object-cover opacity-30 rounded-3xl z-0"
             style={{filter: 'blur(2px)'}}
           />
