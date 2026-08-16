@@ -300,11 +300,9 @@ const OurStory = () => {
       >
         {/* Background image container */}
         <div 
-          className="absolute inset-0 bg-cover bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-no-repeat bg-scroll md:bg-fixed bg-left md:bg-center"
           style={{
             backgroundImage: 'url(/gallery/image-5.jpeg)',
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'left center',
             backgroundSize: 'cover',
           }}
         />
@@ -413,11 +411,9 @@ const OurStory = () => {
       >
         {/* Background image container */}
         <div 
-          className="absolute inset-0 bg-cover bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-no-repeat bg-scroll md:bg-fixed bg-left md:bg-center"
           style={{
             backgroundImage: 'url(/gallery/image-8.jpeg)',
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'left center',
             backgroundSize: 'cover',
           }}
         />
