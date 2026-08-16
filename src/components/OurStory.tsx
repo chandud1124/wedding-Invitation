@@ -289,33 +289,55 @@ const OurStory = () => {
               object-position: left !important;
               min-width: 200px !important;
             }
+            .arrangement-section {
+              background-position: 25% center !important;
+            }
+            .growing-section {
+              background-position: center center !important;
+            }
+          }
+          @supports (-webkit-touch-callout: none) {
+            .arrangement-section, .growing-section {
+              background-attachment: scroll !important;
+            }
+            @media (max-width: 768px) {
+              .arrangement-section {
+                background-position: 25% center !important;
+              }
+              .growing-section {
+                background-position: center center !important;
+              }
+            }
           }
         `}</style>
       </section>
 
       {/* The Arrangement section with parallax/fixed background and animated text */}
       <section
-        className="w-full min-h-screen flex items-center justify-end bg-background relative px-2 md:px-0 p-0 m-0 border-b border-border/20"
-        style={{ height: '100vh', overflowX: 'hidden', position: 'relative' }}
+        className="w-full min-h-screen flex items-center justify-end bg-background relative px-2 md:px-0 p-0 m-0 border-b border-border/20 arrangement-section"
+        style={{ 
+          height: '100vh', 
+          overflowX: 'hidden',
+          position: 'relative',
+          backgroundImage: 'url(/gallery/image-5.jpeg)',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'left center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}
       >
-        {/* Background image container */}
-        <div 
-          className="absolute inset-0 bg-cover bg-no-repeat bg-scroll md:bg-fixed bg-[position:30%_center] md:bg-center"
-          style={{
-            backgroundImage: 'url(/gallery/image-5.jpeg)',
-            backgroundSize: 'cover',
-          }}
-        />
         {/* Subtle Transparent Ivory Overlay */}
         <div className="absolute inset-0 bg-background/15 z-10"></div>
         
-        <div className="relative z-20 flex items-end md:items-center min-h-screen w-full justify-center md:justify-end px-4 md:px-0 pb-10 md:pb-0">
+        <div className="relative z-20 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
           <div
             className="glass rounded-3xl shadow-sm sm:max-w-xs md:max-w-sm lg:max-w-md w-full mr-0 md:mr-20 p-4 sm:p-6 md:p-16 flex flex-col justify-center items-center text-center mx-auto md:mx-0 arrangement-content-box"
             style={{
               minHeight: '60vh',
               color: '#262626',
-              background: '#F7F3EA',
+              background: 'rgba(247, 243, 234, 0.85)',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
               border: '1px solid rgba(197, 160, 89, 0.25)',
               boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.04)',
               borderRadius: '1.5rem',
@@ -406,27 +428,30 @@ const OurStory = () => {
 
       {/* Growing Together section */}
       <section
-        className="w-full min-h-screen flex items-center justify-end bg-background relative px-2 md:px-0 p-0 m-0 border-b border-border/20"
-        style={{ height: '100vh', overflowX: 'hidden', position: 'relative' }}
+        className="w-full min-h-screen flex items-center justify-end bg-background relative px-2 md:px-0 p-0 m-0 border-b border-border/20 growing-section"
+        style={{ 
+          height: '100vh', 
+          overflowX: 'hidden',
+          position: 'relative',
+          backgroundImage: 'url(/gallery/image-8.jpeg)',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'left center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover'
+        }}
       >
-        {/* Background image container */}
-        <div 
-          className="absolute inset-0 bg-cover bg-no-repeat bg-scroll md:bg-fixed bg-center"
-          style={{
-            backgroundImage: 'url(/gallery/image-8.jpeg)',
-            backgroundSize: 'cover',
-          }}
-        />
         {/* Subtle Transparent Ivory Overlay */}
         <div className="absolute inset-0 bg-background/15 z-10"></div>
 
-        <div className="relative z-20 flex items-end md:items-center min-h-screen w-full justify-center md:justify-end px-4 md:px-0 pb-10 md:pb-0">
+        <div className="relative z-20 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
           <div
             className="glass rounded-3xl shadow-sm sm:max-w-xs md:max-w-sm lg:max-w-md w-full mr-0 md:mr-20 p-4 sm:p-6 md:p-16 flex flex-col justify-center items-center text-center mx-auto md:mx-0 arrangement-content-box"
             style={{
               minHeight: '60vh',
               color: '#262626',
-              background: '#F7F3EA',
+              background: 'rgba(247, 243, 234, 0.85)',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
               border: '1px solid rgba(197, 160, 89, 0.25)',
               boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.04)',
               borderRadius: '1.5rem',
