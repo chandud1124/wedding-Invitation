@@ -298,7 +298,7 @@ const OurStory = () => {
         className="w-full min-h-screen flex items-center justify-end bg-background relative px-2 md:px-0 p-0 m-0 border-b border-border/20"
         style={{ height: '100vh', overflowX: 'hidden', position: 'relative' }}
       >
-        {/* Background image container with filter */}
+        {/* Background image container */}
         <div 
           className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
@@ -306,12 +306,10 @@ const OurStory = () => {
             backgroundAttachment: 'fixed',
             backgroundPosition: 'left center',
             backgroundSize: 'cover',
-            filter: 'brightness(0.85) contrast(1.05) saturate(0.85)'
           }}
         />
-        {/* Warm Ivory Overlay & Vignette */}
-        <div className="absolute inset-0 bg-background/65 z-10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(247,243,234,0.1)_0%,rgba(247,243,234,0.75)_80%)] z-10"></div>
+        {/* Subtle Transparent Ivory Overlay */}
+        <div className="absolute inset-0 bg-background/15 z-10"></div>
         
         <div className="relative z-20 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
           <div
@@ -413,7 +411,7 @@ const OurStory = () => {
         className="w-full min-h-screen flex items-center justify-end bg-background relative px-2 md:px-0 p-0 m-0 border-b border-border/20"
         style={{ height: '100vh', overflowX: 'hidden', position: 'relative' }}
       >
-        {/* Background image container with filter */}
+        {/* Background image container */}
         <div 
           className="absolute inset-0 bg-cover bg-no-repeat"
           style={{
@@ -421,12 +419,10 @@ const OurStory = () => {
             backgroundAttachment: 'fixed',
             backgroundPosition: 'left center',
             backgroundSize: 'cover',
-            filter: 'brightness(0.85) contrast(1.05) saturate(0.85)'
           }}
         />
-        {/* Warm Ivory Overlay & Vignette */}
-        <div className="absolute inset-0 bg-background/65 z-10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(247,243,234,0.1)_0%,rgba(247,243,234,0.75)_80%)] z-10"></div>
+        {/* Subtle Transparent Ivory Overlay */}
+        <div className="absolute inset-0 bg-background/15 z-10"></div>
 
         <div className="relative z-20 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
           <div
