@@ -296,33 +296,33 @@ const OurStory = () => {
       {/* The Arrangement section with parallax/fixed background and animated text */}
       <section
         className="w-full min-h-screen flex items-center justify-end bg-background relative px-2 md:px-0 p-0 m-0 border-b border-border/20"
-        style={{ 
-          height: '100vh', 
-          overflowX: 'hidden',
-          position: 'relative',
-          backgroundImage: 'url(/gallery/image-5.jpeg)',
-          backgroundAttachment: 'fixed',
-          backgroundPosition: 'left center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'
-        }}
+        style={{ height: '100vh', overflowX: 'hidden', position: 'relative' }}
       >
-        {/* Ivory tint overlay */}
-        <div className="absolute inset-0 bg-background/25" />
+        {/* Background image container with filter */}
+        <div 
+          className="absolute inset-0 bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/gallery/image-5.jpeg)',
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'left center',
+            backgroundSize: 'cover',
+            filter: 'brightness(0.85) contrast(1.05) saturate(0.85)'
+          }}
+        />
+        {/* Warm Ivory Overlay & Vignette */}
+        <div className="absolute inset-0 bg-background/65 z-10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(247,243,234,0.1)_0%,rgba(247,243,234,0.75)_80%)] z-10"></div>
         
-        <div className="relative z-10 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
+        <div className="relative z-20 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
           <div
-            className="glass rounded-3xl shadow-xl sm:max-w-xs md:max-w-sm lg:max-w-md w-full mr-0 md:mr-20 p-4 sm:p-6 md:p-16 flex flex-col justify-center items-center text-center mx-auto md:mx-0 arrangement-content-box"
+            className="glass rounded-3xl shadow-sm sm:max-w-xs md:max-w-sm lg:max-w-md w-full mr-0 md:mr-20 p-4 sm:p-6 md:p-16 flex flex-col justify-center items-center text-center mx-auto md:mx-0 arrangement-content-box"
             style={{
               minHeight: '60vh',
               color: '#262626',
-              background: 'rgba(250, 249, 246, 0.92)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(197, 160, 89, 0.3)',
-              boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.05)',
-              WebkitBackdropFilter: 'blur(12px)',
+              background: '#F7F3EA',
+              border: '1px solid rgba(197, 160, 89, 0.25)',
+              boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.04)',
               borderRadius: '1.5rem',
-              transition: 'background 0.3s, box-shadow 0.3s',
             }}
           >
             <div ref={arrangementTextRef} className="opacity-0 translate-y-8 transition-all duration-700">
@@ -355,7 +355,7 @@ const OurStory = () => {
 
       {/* First Meeting section */}
       <section className="w-full min-h-screen flex items-center justify-center bg-background relative p-0 m-0 border-b border-border/20">
-        <div className="glass shadow-2xl flex flex-col lg:flex-row items-center w-full h-screen max-w-none mx-0 overflow-hidden relative rounded-none border-y-0 border-x-0">
+        <div className="glass flex flex-col lg:flex-row items-center w-full h-screen max-w-none mx-0 overflow-hidden relative rounded-none border-y-0 border-x-0">
           {/* Image left - KEEPING ORIGINAL DIMENSIONS AND CONTAINERS UNTOUCHED */}
           <div className="w-full lg:w-1/2 flex items-center justify-center p-2 md:p-4">
             <div
@@ -411,32 +411,33 @@ const OurStory = () => {
       {/* Growing Together section */}
       <section
         className="w-full min-h-screen flex items-center justify-end bg-background relative px-2 md:px-0 p-0 m-0 border-b border-border/20"
-        style={{ 
-          height: '100vh', 
-          overflowX: 'hidden',
-          position: 'relative',
-          backgroundImage: 'url(/gallery/image-8.jpeg)',
-          backgroundAttachment: 'fixed',
-          backgroundPosition: 'left center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'
-        }}
+        style={{ height: '100vh', overflowX: 'hidden', position: 'relative' }}
       >
-        {/* Ivory tint overlay */}
-        <div className="absolute inset-0 bg-background/25" />
-        <div className="relative z-10 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
+        {/* Background image container with filter */}
+        <div 
+          className="absolute inset-0 bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/gallery/image-8.jpeg)',
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'left center',
+            backgroundSize: 'cover',
+            filter: 'brightness(0.85) contrast(1.05) saturate(0.85)'
+          }}
+        />
+        {/* Warm Ivory Overlay & Vignette */}
+        <div className="absolute inset-0 bg-background/65 z-10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(247,243,234,0.1)_0%,rgba(247,243,234,0.75)_80%)] z-10"></div>
+
+        <div className="relative z-20 flex items-center min-h-screen w-full justify-end md:justify-end justify-center px-0 md:px-0">
           <div
-            className="glass rounded-3xl shadow-xl sm:max-w-xs md:max-w-sm lg:max-w-md w-full mr-0 md:mr-20 p-4 sm:p-6 md:p-16 flex flex-col justify-center items-center text-center mx-auto md:mx-0 arrangement-content-box"
+            className="glass rounded-3xl shadow-sm sm:max-w-xs md:max-w-sm lg:max-w-md w-full mr-0 md:mr-20 p-4 sm:p-6 md:p-16 flex flex-col justify-center items-center text-center mx-auto md:mx-0 arrangement-content-box"
             style={{
               minHeight: '60vh',
               color: '#262626',
-              background: 'rgba(250, 249, 246, 0.92)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(197, 160, 89, 0.3)',
-              boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.05)',
-              WebkitBackdropFilter: 'blur(12px)',
+              background: '#F7F3EA',
+              border: '1px solid rgba(197, 160, 89, 0.25)',
+              boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.04)',
               borderRadius: '1.5rem',
-              transition: 'background 0.3s, box-shadow 0.3s',
             }}
           >
             <div ref={growingTextRef} className="opacity-0 translate-y-8 transition-all duration-700">
@@ -454,7 +455,7 @@ const OurStory = () => {
 
       {/* Finally, Here We Are section */}
       <section className="w-full min-h-screen flex items-center justify-center bg-background relative p-0 m-0">
-        <div className="glass shadow-2xl flex flex-col lg:flex-row items-center w-full h-screen max-w-none mx-0 overflow-hidden relative rounded-none border-y-0 border-x-0">
+        <div className="glass flex flex-col lg:flex-row items-center w-full h-screen max-w-none mx-0 overflow-hidden relative rounded-none border-y-0 border-x-0">
           {/* Image left - KEEPING ORIGINAL DIMENSIONS AND CONTAINERS UNTOUCHED */}
           <div className="w-full lg:w-1/2 flex items-center justify-center p-2 md:p-4">
             <div
