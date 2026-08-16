@@ -8,7 +8,7 @@ import Loader from '../components/ui/Loader';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-rose-50 to-pink-50 overflow-x-hidden w-full">
+    <div className="min-h-screen bg-background overflow-x-hidden w-full">
       <Navigation />
       <Suspense fallback={<Loader />}>
         <Hero />

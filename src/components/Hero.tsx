@@ -44,9 +44,9 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen overflow-hidden flex flex-col justify-center"
+      className="relative min-h-screen overflow-hidden flex flex-col justify-center bg-background"
     >
-      {/* Background Image with Parallax Effect */}
+      {/* Background Image with Parallax Effect and Ivory Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -55,65 +55,27 @@ const Hero = () => {
           scale: '1.1'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-purple-800/60 to-pink-700/70"></div>
-      </div>
-
-      {/* Floating Hearts Animation */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(12)].map((_, i) => (
-          <Heart 
-            key={`heart-${i}`}
-            size={Math.random() * 20 + 10}
-            className="absolute text-pink-300/30 animate-float-hearts"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 3}s`
-            }}
-          />
-        ))}
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-[1px]"></div>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-32">
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-20">
         <div className="text-center max-w-4xl mx-auto">
           
-          {/* Names with Elegant Animation */}
-          <div 
-            className="mb-8 animate-fade-in-up"
-            style={{ 
-              animationDelay: '0s', // Show immediately
-              animationDuration: '0.7s',
-              transform: `translateY(${scrollY * -0.2}px)`
-            }}
-          >
-            <h1 className="font-serif text-7xl xs:text-8xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4 leading-tight flex flex-col sm:flex-row items-center sm:items-baseline justify-center gap-2 sm:gap-6 relative flex-wrap text-balance" style={{ lineHeight: 1.2, paddingBottom: '0.25em' }}>
-              <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-blue-300 bg-clip-text text-transparent hover:scale-105 transition-transform duration-500">
-                Chiranjith
-              </span>
-              <span className="relative flex items-center justify-center align-middle my-2 sm:my-0" style={{marginTop: '0.1em'}}>
-                <span className="absolute -inset-4 animate-ping rounded-full bg-pink-300/40 z-0" style={{filter: 'blur(8px)'}}></span>
-                <Heart size={48} className="text-red-400 drop-shadow-lg animate-bounce-slow z-10 align-middle" style={{filter: 'drop-shadow(0 0 8px #f87171)', verticalAlign: 'middle'}} />
-              </span>
-              <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent hover:scale-105 transition-transform duration-500">
-                K. Thriveni
-              </span>
+          {/* Names with Elegant Typography */}
+          <div className="mb-6 animate-fade-in-up">
+            <h1 className="font-serif text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-bold mb-4 text-foreground tracking-wide flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+              <span>Chiranjith</span>
+              <span className="text-primary italic font-light font-serif">&</span>
+              <span>K. Thriveni</span>
             </h1>
           </div>
 
           {/* Wedding Date */}
-          <div 
-            className="mb-12 animate-fade-in-up flex justify-center w-full"
-            style={{ 
-              animationDelay: '0s', // Show immediately
-              animationDuration: '0.7s',
-              transform: `translateY(${scrollY * -0.1}px)`
-            }}
-          >
-            <div className="inline-flex items-center bg-white/20 backdrop-blur-md px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full shadow-xl border border-white/30 max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto" style={{width: 'auto', minWidth: 220}}>
-              <Calendar size={24} className="text-yellow-300 mr-3" />
-              <span className="font-bold text-base sm:text-lg md:text-xl text-white truncate">
+          <div className="mb-10 animate-fade-in-up flex justify-center w-full">
+            <div className="inline-flex items-center bg-background/50 border border-primary/20 px-6 py-2 rounded-full shadow-sm mx-auto">
+              <Calendar size={18} className="text-primary mr-3" />
+              <span className="font-sans font-medium text-xs sm:text-sm text-foreground/80 tracking-widest uppercase">
                 August 23rd, 2026
               </span>
             </div>
@@ -121,32 +83,19 @@ const Hero = () => {
 
           {/* Countdown Timer */}
           {!isMarried ? (
-            <div 
-              className="mb-12 animate-slide-up"
-              style={{ 
-                animationDelay: '0s', // Show immediately
-                animationDuration: '0.7s',
-                transform: `translateY(${scrollY * -0.05}px)`
-              }}
-            >
-              <h3 className="text-xl sm:text-2xl font-serif text-white mb-6 font-medium">
-                Countdown to Our Special Day
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-xs sm:max-w-lg md:max-w-2xl mx-auto px-2 sm:px-4 md:px-0 w-full">
+            <div className="mb-10 animate-slide-up">
+              <div className="flex items-center justify-center space-x-6 sm:space-x-8 max-w-md mx-auto">
                 {[
-                  { label: 'Days', value: timeLeft.days, color: 'from-yellow-400 to-orange-500' },
-                  { label: 'Hours', value: timeLeft.hours, color: 'from-pink-400 to-red-500' },
-                  { label: 'Minutes', value: timeLeft.minutes, color: 'from-green-400 to-emerald-500' },
-                  { label: 'Seconds', value: timeLeft.seconds, color: 'from-blue-500 to-blue-700' }
+                  { label: 'Days', value: timeLeft.days },
+                  { label: 'Hours', value: timeLeft.hours },
+                  { label: 'Mins', value: timeLeft.minutes },
+                  { label: 'Secs', value: timeLeft.seconds }
                 ].map((item) => (
-                  <div 
-                    key={item.label} 
-                    className={`bg-white/20 backdrop-blur-md rounded-xl p-3 sm:p-4 shadow-xl border border-white/20 hover:scale-105 transition-all duration-300`}
-                  >
-                    <div className={`text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-1 drop-shadow-lg`}>
+                  <div key={item.label} className="text-center">
+                    <div className="text-2xl sm:text-3xl font-serif font-bold text-primary">
                       {item.value}
                     </div>
-                    <div className="text-xs sm:text-sm font-medium text-white/90 uppercase tracking-wider">
+                    <div className="text-[10px] font-sans font-medium text-foreground/60 uppercase tracking-widest mt-1">
                       {item.label}
                     </div>
                   </div>
@@ -154,59 +103,26 @@ const Hero = () => {
               </div>
             </div>
           ) : (
-            <div className="mb-12 flex flex-col items-center justify-center animate-fade-in-up relative min-h-[300px]">
-              <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white mb-4 animate-gradient-move bg-gradient-to-r from-yellow-400 via-pink-400 to-blue-500 bg-clip-text text-transparent">
+            <div className="mb-10 animate-fade-in-up">
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-primary tracking-wide">
                 We Are Married!
               </h2>
-              <div className="flex gap-4 mt-4">
-                {[...Array(8)].map((_, i) => (
-                  <span key={i} className="w-6 h-6 rounded-full bg-gradient-to-br from-pink-400 via-yellow-400 to-blue-400 animate-firework" style={{ animationDelay: `${i * 0.2}s` }}></span>
-                ))}
-              </div>
-              {/* Confetti Celebration Animation */}
-              <div className="pointer-events-none absolute inset-0 z-50">
-                {[...Array(40)].map((_, i) => (
-                  <span
-                    key={i}
-                    className="absolute block w-2 h-6 rounded-full"
-                    style={{
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                      background: `hsl(${Math.random() * 360}, 90%, 60%)`,
-                      opacity: 0.8,
-                      transform: `rotate(${Math.random() * 360}deg)`,
-                      animation: `confetti-fall 1.8s cubic-bezier(0.4,0,0.2,1) ${Math.random()}s both`
-                    }}
-                  />
-                ))}
-              </div>
             </div>
           )}
 
           {/* Simple Elegant Quote */}
-          <div 
-            className="mt-8"
-            style={{ 
-              animationDelay: '2s',
-              transform: `translateY(${scrollY * -0.03}px)`
-            }}
-          >
-            <div className="text-lg sm:text-xl text-white font-light max-w-2xl mx-auto leading-relaxed break-words whitespace-normal sm:whitespace-pre-line flex items-center justify-center">
-              <span className="inline-block relative animate-text-reveal">
-                <span>
-                  "Like <span className='text-white font-bold'>sacred threads</span> in a <span className='text-yellow-400 font-bold'>mangalsutra</span>, our <span className='text-yellow-400 font-bold'>fates</span> are <span className='text-white font-bold'>woven together</span>"
-                </span>
-              </span>
+          <div className="mt-8">
+            <div className="text-lg sm:text-xl text-foreground/80 font-serif font-light max-w-2xl mx-auto leading-relaxed italic">
+              "Like sacred threads in a mangalsutra, our fates are woven together"
             </div>
-            {/* Continuous Mangalsutra Dots Animation */}
-            <div className="flex justify-center items-center mt-4 gap-1">
-              {[...Array(12)].map((_, i) => (
+            {/* Continuous Mangalsutra Dots */}
+            <div className="flex justify-center items-center mt-6 gap-1.5">
+              {[...Array(8)].map((_, i) => (
                 <span
                   key={i}
-                  className="inline-block w-2 h-2 rounded-full bg-yellow-500 animate-mangal-dot-continuous"
+                  className="inline-block w-1.5 h-1.5 rounded-full bg-primary/40 animate-mangal-dot-continuous"
                   style={{
                     animationDelay: `${i * 0.18}s`,
-                    boxShadow: '0 0 4px #eab308',
                     verticalAlign: 'middle'
                   }}
                 ></span>

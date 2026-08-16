@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,22 +22,16 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-700 rounded-b-2xl md:rounded-b-3xl ${
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-750 ${
       scrolled
-        ? 'bg-white/30 backdrop-blur-2xl shadow-lg border-b border-rose-200/30 h-14 opacity-100 pointer-events-auto'
+        ? 'bg-background/90 backdrop-blur-md border-b border-border/40 shadow-sm h-14 opacity-100 pointer-events-auto'
         : 'opacity-0 pointer-events-none h-14'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center">
         <div className="flex justify-between items-center w-full">
-          <div className={`flex items-center space-x-3 group hover-scale transition-all duration-300 ${isOpen ? 'scale-90' : ''}`}>
-            <img src="/image-2.svg" alt="Logo" className={`w-14 h-14 rounded-full transition-all duration-300 ${isOpen ? 'w-10 h-10' : ''}`} style={{ display: 'block', lineHeight: 1.2, paddingBottom: '0.25em', cursor: 'pointer' }} onClick={() => scrollToSection('home')} />
-            <div className="relative">
-              <Heart size={isOpen ? 20 : 28} className="text-orange-600 animate-pulse group-hover:animate-bounce transition-all duration-300" />
-              <div className="absolute inset-0 animate-ping opacity-20">
-                <Heart size={isOpen ? 20 : 28} className="text-orange-400 transition-all duration-300" />
-              </div>
-            </div>
-            <div className={`font-serif font-bold bg-gradient-to-r from-orange-600 via-amber-600 to-red-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300 ${isOpen ? 'text-xl' : 'text-3xl'}`}>
+          <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => scrollToSection('home')}>
+            <img src="/image-2.svg" alt="Logo" className={`w-10 h-10 rounded-full transition-all duration-300 ${isOpen ? 'w-8 h-8' : ''}`} style={{ display: 'block' }} />
+            <div className="font-serif font-bold text-foreground hover:text-primary transition-colors duration-300 text-2xl tracking-wide">
               C & T
             </div>
           </div>
@@ -52,32 +46,32 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className="relative text-orange-800 hover:text-transparent hover:bg-gradient-to-r hover:from-orange-600 hover:to-red-600 hover:bg-clip-text transition-all duration-500 font-bold text-lg group transform hover:scale-110 hover:-translate-y-1"
+                className="relative text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-base group"
               >
                 {item.name}
-                <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-orange-500 via-amber-500 to-red-500 group-hover:w-full transition-all duration-700 rounded-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-primary group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-orange-800 hover:text-red-600 transition-all duration-300 transform hover:scale-125 hover:rotate-180"
+            className="md:hidden p-2 text-foreground/80 hover:text-primary transition-all duration-300"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
           <div
-            className="fixed inset-0 z-40 bg-black/10 backdrop-blur-sm animate-fade-in"
+            className="fixed inset-0 z-40 bg-black/5 backdrop-blur-xs animate-fade-in"
             onClick={() => setIsOpen(false)}
           >
             <div
-              className="md:hidden bg-gradient-to-br from-orange-50/95 via-amber-50/95 to-red-50/95 rounded-2xl shadow-2xl mb-4 p-6 border-2 border-orange-200/50 absolute left-0 right-0 top-16 mx-4 animate-slide-down"
-              style={{ animationDuration: '350ms' }}
+              className="md:hidden bg-background/95 backdrop-blur-md rounded-2xl shadow-xl mb-4 p-6 border border-border/40 absolute left-0 right-0 top-16 mx-4 animate-slide-down"
+              style={{ animationDuration: '300ms' }}
               onClick={e => e.stopPropagation()}
             >
               {[
@@ -88,7 +82,7 @@ const Navigation = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left py-4 text-orange-800 hover:text-transparent hover:bg-gradient-to-r hover:from-orange-600 hover:to-red-600 hover:bg-clip-text transition-all duration-500 font-bold text-lg transform hover:translate-x-4 hover:scale-105"
+                  className="block w-full text-left py-3 text-foreground/80 hover:text-primary transition-colors duration-300 font-medium text-base"
                 >
                   {item.name}
                 </button>

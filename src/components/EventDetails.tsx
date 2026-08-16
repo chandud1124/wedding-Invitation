@@ -42,7 +42,7 @@ const EventDetails = () => {
   return (
     <section 
       id="details" 
-      className="py-20 px-4 min-h-screen relative overflow-hidden"
+      className="py-24 px-4 min-h-screen relative overflow-hidden bg-background"
       style={{
         backgroundImage: `url('/gallery/image-7.jpeg')`,
         backgroundSize: 'cover',
@@ -50,155 +50,132 @@ const EventDetails = () => {
         backgroundAttachment: 'fixed',
       }}
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden z-10 pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-rose-200/30 to-pink-300/30 rounded-full animate-pulse"></div>
-        <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-gradient-to-tr from-red-200/30 to-rose-300/30 rounded-full animate-pulse delay-1000"></div>
-      </div>
+      {/* Warm Ivory Overlay */}
+      <div className="absolute inset-0 bg-background/85 z-10"></div>
 
       <div className="max-w-6xl mx-auto relative z-20">
-        {/* Glassy background for main text */}
-        <div className="backdrop-blur-lg bg-white/40 rounded-3xl shadow-2xl px-6 py-10 md:px-16 md:py-14 mb-16 border border-white/30" style={{boxShadow: '0 8px 32px 0 rgba(31,38,135,0.18)', WebkitBackdropFilter: 'blur(18px) saturate(120%)', backdropFilter: 'blur(18px) saturate(120%)'}}>
-          <div className="text-center transition-all duration-1000 opacity-100 transform translate-y-0 animate-fade-in-up">
-            <h2 className="font-serif text-6xl md:text-7xl font-bold text-rose-900 drop-shadow-lg mb-8 hover:scale-105 transition-transform duration-300 whitespace-pre-line break-words leading-tight md:leading-tight">
-              Journey to Forever
-            </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-rose-500 via-pink-500 to-red-500 mx-auto mb-8"></div>
-            <p className="text-2xl md:text-3xl font-semibold text-rose-800 drop-shadow-md">
-              Join us for a day filled with love, laughter, and lifelong memories
-            </p>
-          </div>
+        {/* Main Text Panel */}
+        <div className="bg-background/90 border border-primary/20 rounded-3xl shadow-sm px-6 py-12 md:px-16 md:py-16 mb-16 text-center animate-fade-in-up">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-6 tracking-wide">
+            Journey to Forever
+          </h2>
+          <div className="w-20 h-[1.5px] bg-primary mx-auto mb-6"></div>
+          <p className="text-xl md:text-2xl font-light text-foreground/80 max-w-2xl mx-auto leading-relaxed">
+            Join us as we celebrate our wedding and begin our journey together.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
           {/* Wedding Ceremony */}
           <div
-            className="glass rounded-2xl shadow-2xl p-8 hover:shadow-3xl transition-all duration-500 hover:scale-105 border opacity-100 transform translate-x-0 animate-fade-in-left"
+            className="glass rounded-2xl p-8 border opacity-100 animate-fade-in-left"
             style={{
-              background: 'rgba(34,34,54,0.72)', // deep blue-gray for contrast
-              color: '#fff',
-              backdropFilter: 'blur(18px) saturate(120%)',
-              WebkitBackdropFilter: 'blur(18px) saturate(120%)',
-              border: '1.5px solid rgba(255,255,255,0.25)',
-              boxShadow: '0 8px 32px 0 rgba(31,38,135,0.18)',
+              background: 'rgba(250, 249, 246, 0.95)',
+              color: '#262626',
+              border: '1px solid rgba(197, 160, 89, 0.3)',
+              boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.04)',
               borderRadius: '1.5rem',
-              transition: 'background 0.3s, box-shadow 0.3s',
             }}
           >
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-rose-100 to-pink-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Calendar className="text-rose-700" size={36} />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Calendar className="text-primary" size={28} />
               </div>
-              <h3 className="font-serif text-3xl font-bold text-white drop-shadow-lg mb-4">
+              <h3 className="font-serif text-3xl font-bold text-foreground mb-4">
                 Tying the Knot
               </h3>
-              <div className="w-16 h-1 bg-gradient-to-r from-rose-500 to-pink-500 mx-auto"></div>
+              <div className="w-12 h-[1.5px] bg-primary/30 mx-auto"></div>
             </div>
 
-            <div className="space-y-6 text-center">
-              <div className="flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
-                <Calendar className="text-rose-200 mr-2" size={24} />
-                <span className="text-white font-semibold text-lg drop-shadow-md">Sunday, 23 August 2026</span>
+            <div className="space-y-4 text-center">
+              <div className="flex items-center justify-center">
+                <Calendar className="text-primary mr-2" size={20} />
+                <span className="text-foreground/80 font-medium text-base">Sunday, 23 August 2026</span>
               </div>
-              <div className="flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
-                <Clock className="text-rose-200 mr-2" size={24} />
-                <span className="text-white font-semibold text-lg drop-shadow-md">10:09 AM – 11:00 AM</span>
+              <div className="flex items-center justify-center">
+                <Clock className="text-primary mr-2" size={20} />
+                <span className="text-foreground/80 font-medium text-base">10:09 AM – 11:00 AM</span>
               </div>
             </div>
           </div>
 
           {/* Reception */}
           <div
-            className="glass rounded-2xl shadow-2xl p-8 hover:shadow-3xl transition-all duration-500 hover:scale-105 border opacity-100 transform translate-x-0 animate-fade-in-right"
+            className="glass rounded-2xl p-8 border opacity-100 animate-fade-in-right"
             style={{
-              background: 'rgba(34,34,54,0.72)',
-              color: '#fff',
-              backdropFilter: 'blur(18px) saturate(120%)',
-              WebkitBackdropFilter: 'blur(18px) saturate(120%)',
-              border: '1.5px solid rgba(255,255,255,0.25)',
-              boxShadow: '0 8px 32px 0 rgba(31,38,135,0.18)',
+              background: 'rgba(250, 249, 246, 0.95)',
+              color: '#262626',
+              border: '1px solid rgba(197, 160, 89, 0.3)',
+              boxShadow: '0 4px 20px 0 rgba(0, 0, 0, 0.04)',
               borderRadius: '1.5rem',
-              transition: 'background 0.3s, box-shadow 0.3s',
             }}
           >
             <div className="text-center mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-red-100 to-rose-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Clock className="text-rose-700" size={36} />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="text-primary" size={28} />
               </div>
-              <h3 className="font-serif text-3xl font-bold text-white drop-shadow-lg mb-4">
+              <h3 className="font-serif text-3xl font-bold text-foreground mb-4">
                 Evening of Elegance
               </h3>
-              <div className="w-16 h-1 bg-gradient-to-r from-red-500 to-rose-500 mx-auto"></div>
+              <div className="w-12 h-[1.5px] bg-primary/30 mx-auto"></div>
             </div>
 
-            <div className="space-y-6 text-center">
-              <div className="flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
-                <Calendar className="text-red-200 mr-2" size={24} />
-                <span className="text-white font-semibold text-lg drop-shadow-md">Saturday, 22 August 2026</span>
+            <div className="space-y-4 text-center">
+              <div className="flex items-center justify-center">
+                <Calendar className="text-primary mr-2" size={20} />
+                <span className="text-foreground/80 font-medium text-base">Saturday, 22 August 2026</span>
               </div>
-              <div className="flex items-center justify-center group-hover:translate-x-2 transition-transform duration-300">
-                <Clock className="text-red-200 mr-2" size={24} />
-                <span className="text-white font-semibold text-lg drop-shadow-md">6:30 PM onwards</span>
+              <div className="flex items-center justify-center">
+                <Clock className="text-primary mr-2" size={20} />
+                <span className="text-foreground/80 font-medium text-base">6:30 PM onwards</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Enhanced Venue Location */}
+        {/* Venue Location */}
         <div
-          className="glass rounded-3xl shadow-2xl p-10 border transition-all duration-1000 hover:shadow-3xl opacity-100 animate-fade-in-up relative overflow-hidden max-w-5xl mx-auto flex items-center justify-center min-h-[400px]"
+          className="glass rounded-3xl p-10 border opacity-100 animate-fade-in-up relative overflow-hidden max-w-5xl mx-auto flex items-center justify-center min-h-[400px]"
           style={{
-            background: 'rgba(34,34,54,0.72)',
-            color: '#fff',
-            backdropFilter: 'blur(18px) saturate(120%)',
-            WebkitBackdropFilter: 'blur(18px) saturate(120%)',
-            border: '1.5px solid rgba(255,255,255,0.25)',
-            boxShadow: '0 8px 32px 0 rgba(31,38,135,0.18)',
+            background: 'rgba(250, 249, 246, 0.95)',
+            color: '#262626',
+            border: '1px solid rgba(197, 160, 89, 0.3)',
+            boxShadow: '0 4px 25px 0 rgba(0, 0, 0, 0.05)',
             borderRadius: '1.5rem',
-            transition: 'background 0.3s, box-shadow 0.3s',
           }}
         >
-          {/* Venue background image */}
+          {/* Venue background image with overlay */}
           <img 
             src="/image-3.png" 
             alt="Sri Girijashankara Kalyana Mantapa"
-            className="absolute inset-0 w-full h-full object-cover opacity-30 rounded-3xl z-0"
-            style={{filter: 'blur(2px)'}}
+            className="absolute inset-0 w-full h-full object-cover opacity-15 rounded-3xl z-0"
+            style={{filter: 'blur(1px)'}}
           />
-          <div className="relative z-10 text-center mb-10 pb-4 flex flex-col items-center justify-center w-full">
-            <h3 className="font-serif text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-8 hover:scale-105 transition-transform duration-300 break-words whitespace-pre-line w-full max-w-full overflow-visible leading-snug min-h-[4.5rem] md:min-h-[6rem] flex items-center justify-center animate-fade-in-up">
+          <div className="absolute inset-0 bg-background/60 z-0"></div>
+          
+          <div className="relative z-10 text-center flex flex-col items-center justify-center w-full">
+            <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
               The Setting of Our Story
             </h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-rose-500 to-red-500 mx-auto mb-8 animate-fade-in-up" style={{animationDelay: '0.2s', animationFillMode: 'both'}}></div>
-            <div className="max-w-5xl mx-auto space-y-6 text-white leading-relaxed animate-fade-in-up" style={{animationDelay: '0.4s', animationFillMode: 'both'}}>
-              <p className="text-xl font-semibold">
+            <div className="w-16 h-[1.5px] bg-primary mx-auto mb-6"></div>
+            <div className="max-w-2xl mx-auto space-y-4 text-foreground/80 leading-relaxed mb-8">
+              <p className="text-lg font-medium italic text-primary">
                 "A place where culture and grace come together to write love’s most beautiful chapter"
               </p>
-              <p className="text-lg md:text-xl">
-                Experience the perfect blend of tradition and luxury at our chosen venue, where every detail reflects the beauty of our union
+              <p className="text-base sm:text-lg">
+                Experience the perfect blend of tradition and luxury at our chosen venue, Sri Girijashankara Kalyana Mantapa.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 animate-fade-in-up" style={{animationDelay: '0.6s', animationFillMode: 'both'}}>
-              <button 
-                onClick={handleDirectionsClick}
-                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-rose-600 to-pink-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 hover:from-rose-700 hover:to-pink-700"
-              >
-                <ExternalLink className="mr-3 group-hover:animate-bounce" size={20} />
-                <span className="text-lg">Get Directions</span>
-              </button>
-            </div>
+            <button 
+              onClick={handleDirectionsClick}
+              className="group inline-flex items-center px-8 py-3.5 bg-primary text-white font-medium rounded-full shadow-sm hover:shadow-md transform transition-all duration-300 hover:scale-[1.02]"
+            >
+              <ExternalLink className="mr-3" size={18} />
+              <span className="text-base">Get Directions</span>
+            </button>
           </div>
         </div>
       </div>
-      <style>{`
-        @keyframes fade-in-up {
-          0% { opacity: 0; transform: translateY(40px) scale(0.98); }
-          100% { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        .animate-fade-in-up {
-          animation: fade-in-up 1s cubic-bezier(0.23, 1, 0.32, 1) both;
-        }
-      `}</style>
     </section>
   );
 };
